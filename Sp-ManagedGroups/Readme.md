@@ -10,11 +10,11 @@ A widget for the Service Portal so the current user can manage members of the gr
 * Add / Remove members from a group
 * Filters out users already in the group
 * Robust validation and feedback messages
-* Uses GlideRecordSecure
+* Uses GlideRecordSecure for queries
 
 ## Configuration
 
-* Base user encoded query (default of 'active=true'; clear query with '^')
+* Base user filter encoded query (default of 'active=true'; clear query with '^' in instance options)
 * Bootstrap Color and Glyph
 * Overridable title
 
