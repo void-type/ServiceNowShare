@@ -143,6 +143,8 @@ VoidServiceCatalogUtil.prototype = {
     var tableHeadClose = '</thead>';
     var tableHeadCellOpen = '<th>';
     var tableHeadCellClose = '</th>';
+    var tableBodyOpen = '<tbody>';
+    var tableBodyClose = '</tbody>';
     var tableCellOpen = '<td>';
     var tableCellClose = '</td>';
 
@@ -184,10 +186,10 @@ VoidServiceCatalogUtil.prototype = {
           })
           .join('');
 
-        var tableTitle = [variable.label, ': </br>']
+        var tableTitle = [variable.label, ': <br>']
           .join('');
 
-        return [itemOpen, tableTitle, tableOpen, tableHeader, '<tbody>', tableRows, '</tbody>', tableClose, itemClose]
+        return [itemOpen, tableTitle, tableOpen, tableHeader, tableBodyOpen, tableRows, tableBodyClose, tableClose, itemClose]
           .join('');
 
       })
