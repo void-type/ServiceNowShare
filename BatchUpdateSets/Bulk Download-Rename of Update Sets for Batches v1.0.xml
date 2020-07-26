@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?><unload unload_date="2020-07-26 22:26:01">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>Bulk Download-Rename of Update Sets for Batches v1.0</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>ee94f6e0db921010634de4da4b9619ec</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-07-26 22:26:01</sys_created_on>
+<sys_id>ebf65630dbda1010634de4da4b961990</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-07-26 22:26:01</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ui_action_c5a659b4db1a1010634de4da4b96195e</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name&gt;export_batch_all&lt;/action_name&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;gs.hasRole('admin')&lt;/condition&gt;&lt;form_action&gt;false&lt;/form_action&gt;&lt;form_button&gt;false&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;false&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;hint&gt;Create a Retrieved Update Set for exporting&lt;/hint&gt;&lt;isolate_script&gt;false&lt;/isolate_script&gt;&lt;list_action&gt;true&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;true&lt;/list_choice&gt;&lt;list_context_menu&gt;true&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;name&gt;Export Update Set Batch to XML (bulk)&lt;/name&gt;&lt;onclick&gt;bulkBatchExport();&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function bulkBatchExport() {
+    g_list.getChecked()
+        .split(',')
+        .forEach(function(localId) {
+            var ga = new GlideAjax('UpdateSetExportAJAX');
+            ga.addParam('sysparm_name', 'exportHierarchy');
+            ga.addParam('sysparm_sysId', localId);
+            ga.getXMLAnswer(onExportHierarchy);
+
+        });
+
+    function onExportHierarchy(sysId) {
+        window.open("export_base_update_set.do?sysparm_sys_id=" + sysId + "&amp;sysparm_delete_when_done=true");
+    }
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-07-26 17:44:52&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;c5a659b4db1a1010634de4da4b96195e&lt;/sys_id&gt;&lt;sys_mod_count&gt;23&lt;/sys_mod_count&gt;&lt;sys_name&gt;Export Update Set Batch to XML (bulk)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_c5a659b4db1a1010634de4da4b96195e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-07-26 22:18:14&lt;/sys_updated_on&gt;&lt;table&gt;sys_update_set&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+<payload_hash>961302023</payload_hash>
+<remote_update_set display_value="Bulk Download-Rename of Update Sets for Batches">ebf65630dbda1010634de4da4b961990</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-07-26 22:26:01</sys_created_on>
+<sys_id>27f65630dbda1010634de4da4b961991</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1738d347d310000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-07-26 22:26:01</sys_updated_on>
+<table>sys_update_set</table>
+<target_name>Export Update Set Batch to XML (bulk)</target_name>
+<type>UI Action</type>
+<update_domain>global</update_domain>
+<update_guid>51359abc309a1010a0dce069caa04cf8</update_guid>
+<update_guid_history>51359abc309a1010a0dce069caa04cf8:961302023,3d25debc819a101027ddfb25550290ad:-511315709,db939a7c719a1010ee82169a5a115ab9:-966193868,64311ef8f39a10103131ed1d6c844449:1436614576,ea2f0e78a69a1010e55c7b6715214553:-596944760,fd5b0ef4f69a10102e5809cdfa7269a1:1069812581,123a82b40a9a1010493d1e0fe9fc5b77:-1814066967,f7d882b41b9a101048b64401c69ca14c:902445901,be984a74b39a10108bd20596d69c3801:723153720,46888a74749a1010de16ea09fc873638:-185579174,9cc70674589a10107b85e7c1d48dc90c:-358991432,4856ceb01d9a10100b1a070559be4bfa:-1706801043,39a506f0bd9a10103bcc8f869c7604ee:-238715763,d1b406f06d9a10101407b34847cff2e8:929590522,a9a442f01a9a101041674d562b62ea77:-1324829214,2c444eb0a89a1010ece1d1402870656f:-1557467479,11140eb0989a10103f7635e7e06f598b:-317614739,3293ce70ed9a1010ca903ee3bdfb4cbc:1056255543,5c124670e05a1010907d763ed8b66443:-232274481,e659d9380f1a1010548a77b30d92ba61:1902302188,d1b85938011a10102e4ace42afe935fc:-1579585343,8b685938c31a101073eaae80bebd3105:993179775,17081df48e1a1010250ba59be594594d:463336571,41a659b40e1a10100072506e5feafa60:-815655439</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_script_include_9d3e4a78db9a1010634de4da4b9619b0</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_script_include"&gt;&lt;sys_script_include action="INSERT_OR_UPDATE"&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;active&gt;true&lt;/active&gt;&lt;api_name&gt;global.UpdateSetExportAJAX&lt;/api_name&gt;&lt;caller_access/&gt;&lt;client_callable&gt;true&lt;/client_callable&gt;&lt;description&gt;AJAX API wrapper for the OOB UpdateSetExport to export batch sets in bulk from a list view.&lt;/description&gt;&lt;name&gt;UpdateSetExportAJAX&lt;/name&gt;&lt;script&gt;&lt;![CDATA[var UpdateSetExportAJAX = Class.create();
+UpdateSetExportAJAX.prototype = Object.extendsObject(AbstractAjaxProcessor, {
+    exportHierarchy: function() {
+        var localId = this.getParameter('sysparm_sysId');
+
+        var updateSetGr = new GlideRecord('sys_update_set');
+        updateSetGr.get(localId);
+
+        var updateSetExport = new UpdateSetExport();
+        var remoteId = updateSetExport.exportHierarchy(updateSetGr);
+
+        return remoteId;
+    },
+
+    type: 'UpdateSetExportAJAX'
+});]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_include&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-07-26 21:49:09&lt;/sys_created_on&gt;&lt;sys_id&gt;9d3e4a78db9a1010634de4da4b9619b0&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;UpdateSetExportAJAX&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_include_9d3e4a78db9a1010634de4da4b9619b0&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-07-26 22:01:01&lt;/sys_updated_on&gt;&lt;/sys_script_include&gt;&lt;/record_update&gt;</payload>
+<payload_hash>334237219</payload_hash>
+<remote_update_set display_value="Bulk Download-Rename of Update Sets for Batches v1.0">ebf65630dbda1010634de4da4b961990</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-07-26 22:26:01</sys_created_on>
+<sys_id>63f65630dbda1010634de4da4b961991</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1738d24bb3a0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-07-26 22:26:01</sys_updated_on>
+<table/>
+<target_name>UpdateSetExportAJAX</target_name>
+<type>Script Include</type>
+<update_domain>global</update_domain>
+<update_guid>d14196f8449a1010570b16771a2fa2d6</update_guid>
+<update_guid_history>d14196f8449a1010570b16771a2fa2d6:334237219,41c096f85c9a1010fe695df3eef15aca:-127477744,54209eb8a69a1010b05b5eef97c853bd:1816923881,c8ff0eb8589a101028d7a071be6a95a2:-1093269113,07af02f8bc9a101033ae67484ae93e7e:1979104118,a78ece780b9a10100b5ed70138e68237:1298911953</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_processor_a302721847130200c17e19fbac9a7163</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_processor"&gt;&lt;sys_processor action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;class_name/&gt;&lt;description&gt;Unloads a retrieved update set batch and all of the related customizations as a downloadable XML document.  This document can then be loaded into another system.&lt;/description&gt;&lt;interactive&gt;true&lt;/interactive&gt;&lt;name&gt;ExportBaseUpdateSet&lt;/name&gt;&lt;parameters/&gt;&lt;params_endpoint/&gt;&lt;path&gt;export_base_update_set&lt;/path&gt;&lt;path_endpoint/&gt;&lt;require_csrf&gt;false&lt;/require_csrf&gt;&lt;roles&gt;admin&lt;/roles&gt;&lt;script&gt;&lt;![CDATA[var sysid = g_request.getParameter('sysparm_sys_id');
+var fileName = g_request.getParameter('sysparam_file_name');
+
+if (!fileName || fileName == '') {
+    var grUpdateSet = new GlideRecord('sys_remote_update_set');
+    grUpdateSet.get(sysid);
+    fileName = grUpdateSet.getValue('name') + '.xml';
+}
+
+var exporter = new ExportWithRelatedListsMine('sys_remote_update_set', sysid);
+if (fileName) {
+    exporter.setFileName(fileName);
+}
+exporter.addRelatedList('sys_remote_update_set', 'remote_base_update_set');
+exporter.addRelatedList('sys_update_xml', 'remote_update_set.remote_base_update_set');
+
+exporter.exportRecords(g_response);
+
+var del = g_request.getParameter('sysparm_delete_when_done');
+if (del == "true") {
+    var ugr = new GlideRecord("sys_remote_update_set");
+    ugr.addQuery("remote_base_update_set", sysid);
+    ugr.query();
+    while (ugr.next() &amp;&amp; ugr.canDelete()) {
+        ugr.deleteRecord();
+    }
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_processor&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2015-10-20 14:29:43&lt;/sys_created_on&gt;&lt;sys_id&gt;a302721847130200c17e19fbac9a7163&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;ExportBaseUpdateSet&lt;/sys_name&gt;&lt;sys_package display_value="Update Set Batching" source="com.glide.system_hierarchy_update_set"&gt;eaac86d1983500107f2c2ed01a1f16b1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_processor_a302721847130200c17e19fbac9a7163&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-07-26 17:35:01&lt;/sys_updated_on&gt;&lt;type&gt;script&lt;/type&gt;&lt;/sys_processor&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-2130517818</payload_hash>
+<remote_update_set display_value="Bulk Download-Rename of Update Sets for Batches">ebf65630dbda1010634de4da4b961990</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>admin</sys_created_by>
+<sys_created_on>2020-07-26 22:26:01</sys_created_on>
+<sys_id>aff65630dbda1010634de4da4b961990</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1738c31327d0000001</sys_recorded_at>
+<sys_updated_by>admin</sys_updated_by>
+<sys_updated_on>2020-07-26 22:26:01</sys_updated_on>
+<table/>
+<target_name>ExportBaseUpdateSet</target_name>
+<type>Processor</type>
+<update_domain>global</update_domain>
+<update_guid>3064d534011a101069387ee98ea977f4</update_guid>
+<update_guid_history>3064d534011a101069387ee98ea977f4:-2130517818,119255f0b01a101035fee86235de4423:1703618832,1a9115f0441a1010cb05e3b3408aa334:1477394966,72af0130261a1010e118181f6a564044:1472025769,64af8130f21a1010b8714f1654b80f0f:1472025769,db6c0930901a10100315910db5713c56:1477394966,963c36a880921010b2358487acfb3dfd:1472025769,d4d972e42d92101093d76b6974be4414:175576191,826876e43a921010f67522695fdaf9b6:1477394966,81b7fe24669210108201bdfc80a03e10:1472025769,294732648c9210101009d12b4bb5b1ac:175576191,0be53e64ed92101030671cc2c5f7410b:1459870818,cbe5f224639210108385fb814590e2e4:1472025769</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>
