@@ -1,3 +1,8 @@
+## v1.3
+
+* Add extra display fields to distinguish users with similar names.
+* User filter option name has changed, so you'll have to reset this option.
+
 ## v1.2
 
 * Fix issue where users cannot remove groups.

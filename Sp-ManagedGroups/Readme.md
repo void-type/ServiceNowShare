@@ -2,21 +2,22 @@
 
 A widget for the Service Portal so the current user can manage members of the groups they own.
 
-![screen shot 1](screen01.png)
-
 ## Features
 
-* List owned groups
-* Add / Remove members from a group
-* Filters out users already in the group
-* Robust validation and feedback messages
-* Uses GlideRecordSecure for queries
+* List owned groups.
+* Add / Remove members from a group.
+* Filters out users already in the group.
+* Extra display fields to distinguish users with similar names.
+* Robust validation and feedback messages.
+* Uses GlideRecordSecure for queries.
+* Bootstrap Color and Glyph.
+* Overridable title.
 
-## Configuration
+## Screenshots
 
-* Base user filter encoded query (default of 'active=true'; clear query with '^' in instance options)
-* Bootstrap Color and Glyph
-* Overridable title
+![screen shot 1](screen01.png)
+![screen shot 2](screen02.png)
+![screen shot 3](screen03.png)
 
 ## More
 
