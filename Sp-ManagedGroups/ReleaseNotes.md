@@ -1,3 +1,7 @@
+## v1.4
+
+* Filter out inactive group members because they show (empty) name.
+
 ## v1.3
 
 * Add extra display fields to distinguish users with similar names.
