@@ -1,3 +1,5 @@
+// Client-side catalog helpers.
+
 var VoidServiceCatalogAjax = Class.create();
 VoidServiceCatalogAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 

@@ -32,7 +32,6 @@
   task.get(current.sysapproval);
 
   if (task.request) {
-    printLine('Employment type: ' + task.requested_for.u_employement_type);
     printLine('Manager or internal contact: ' + task.requested_for.manager.name);
   }
 

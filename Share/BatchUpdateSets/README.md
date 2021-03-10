@@ -11,4 +11,6 @@ It is required you install Jason's utility first (version 1.2 is tested/recommen
 
 ## More
 
+[Find on Share](https://developer.servicenow.com/connect.do#!/share/contents/5924274_batch_update_sets_extension_for_bulk_download_and_rename_of_update_sets?v=1&t=PRODUCT_DETAILS)
+
 [See more on GitHub](https://github.com/void-type/ServiceNowShare)
