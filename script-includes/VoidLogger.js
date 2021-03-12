@@ -17,27 +17,26 @@ VoidLogger.prototype = {
   _minimumLogLevel: null,
 
   _getLogLevels: function () {
-    return [
-      {
-        name: 'error',
-        value: 4,
-        logger: gs.error,
-      },
-      {
-        name: 'warn',
-        value: 3,
-        logger: gs.warn,
-      },
-      {
-        name: 'info',
-        value: 2,
-        logger: gs.info,
-      },
-      {
-        name: 'debug',
-        value: 1,
-        logger: gs.debug,
-      },
+    return [{
+      name: 'error',
+      value: 4,
+      logger: gs.error,
+    },
+    {
+      name: 'warn',
+      value: 3,
+      logger: gs.warn,
+    },
+    {
+      name: 'info',
+      value: 2,
+      logger: gs.info,
+    },
+    {
+      name: 'debug',
+      value: 1,
+      logger: gs.debug,
+    },
     ];
   },
 
@@ -70,6 +69,22 @@ VoidLogger.prototype = {
     logLevel.logger(prefix + ':\n' + JSON.stringify(loggedObject, null, 4));
   },
 
+  error: function (message, variableObject, exception) {
+    this.log('error', message, variableObject, exception);
+  },
+
+  warn: function (message, variableObject, exception) {
+    this.log('warn', message, variableObject, exception);
+  },
+
+  info: function (message, variableObject, exception) {
+    this.log('info', message, variableObject, exception);
+  },
+
+  debug: function (message, variableObject, exception) {
+    this.log('debug', message, variableObject, exception);
+  },
+
   type: 'VoidLogger'
 };
 
@@ -77,18 +92,19 @@ VoidLogger.prototype = {
 // When not in development, you can override the minimum level with a system property called "logger.minimumLevel.My Script" and value of the desired minimum level.
 var logger = new VoidLogger('My Script', 'warn');
 
+// Example usages.
+logger.info('This won\'t be logged because of our minimum logging level.');
+logger.warn('We got here.');
+
 // Collect any other data you want to log in an object. This data can help you diagnose issues.
 var variables = { var1: 'something that should be known', var2: 333 };
+logger.warn('Add an object to be stringified.', variables);
 
-// Example usages.
-logger.log('info', 'This won\'t be logged');
-logger.log('warn', 'We got here');
-logger.log('warn', 'We got here', variables);
+logger.log('warn', 'We can set the log level as a string using "log"');
 
 try {
   throw 'something';
 } catch (ex) {
 
-  // Example usage with exception.
-  logger.log('error', 'something happened', variables, ex);
+  logger.error('Use the exception parameter!', variables, ex);
 }
