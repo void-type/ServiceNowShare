@@ -10,7 +10,7 @@ VoidLogger.prototype = {
 
     this._minimumLogLevel = this._getLevel(minimumLevelOverride) ||
       this._getLevel(minimumLevel) ||
-      this._getLevel('debug');
+      this._getLevel('warn');
   },
 
   _contextName: null,
@@ -88,9 +88,10 @@ VoidLogger.prototype = {
   type: 'VoidLogger'
 };
 
-// Set your context name and minimum log level here. I recommend 'warn' for production.
-// When not in development, you can override the minimum level with a system property called "logger.minimumLevel.My Script" and value of the desired minimum level.
-var logger = new VoidLogger('My Script', 'warn');
+// Build a logger with a context name. You can optionally pass a minimum log level; the default minimum level is 'warn.'
+// You can override the minimum level with a system property called "logger.minimumLevel.My Script" and value of the desired minimum level.
+// To stop overriding, you need to clear the property value before you delete property. This is because SN caches these properties.
+var logger = new VoidLogger('My Script');
 
 // Example usages.
 logger.info('This won\'t be logged because of our minimum logging level.');
