@@ -5,15 +5,15 @@ VoidServiceCatalogUtil.prototype = {
   initialize: function () { },
 
   // Get JS array of catalog variables for a task.
-  // withMRVS=true will return MRVS in results.
-  getVariablesForTask: function (taskGr, withMRVS) {
+  // withMrvs=true will return MRVS in results.
+  getVariablesForTask: function (taskGr, withMrvs) {
     var result = [];
 
     if (!taskGr.isValidRecord()) {
       return result;
     }
 
-    var variables = taskGr.variables.getElements(withMRVS);
+    var variables = taskGr.variables.getElements(withMrvs);
 
     for (var i = 0; i < variables.length; i++) {
       var variable = variables[i];
@@ -110,9 +110,9 @@ VoidServiceCatalogUtil.prototype = {
   },
 
   // Get JS array of catalog variables for a task where visible_summary=true.
-  // withMRVS=true will return MRVS in results.
-  getVariablesForTaskVisibleForSummary: function (taskGr, withMRVS) {
-    return this.getVariablesForTask(taskGr, withMRVS)
+  // withMrvs=true will return MRVS in results.
+  getVariablesForTaskVisibleForSummary: function (taskGr, withMrvs) {
+    return this.getVariablesForTask(taskGr, withMrvs)
       .filter(function (variable) {
         return variable.visible_summary === true;
       })
@@ -129,7 +129,7 @@ VoidServiceCatalogUtil.prototype = {
   },
 
   // Render the variables from above into an html list. MRVS are shown as tables.
-  // Useful in mail scripts for variable summary
+  // Useful in mail scripts for variable summaries.
   transformVariablesToHtml: function (variables) {
     var listOpen = '<ul>';
     var listClose = '</ul>';

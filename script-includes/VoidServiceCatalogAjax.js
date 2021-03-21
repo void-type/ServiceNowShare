@@ -4,7 +4,7 @@ var VoidServiceCatalogAjax = Class.create();
 VoidServiceCatalogAjax.prototype = Object.extendsObject(AbstractAjaxProcessor, {
 
   // Converts MRVS property names from sys_ids to variable names and returns a more usable object.
-  // Useful on Requested Items where MRVS are keyed by sys_id instead of variable name.
+  // Useful on client-side Requested Items where MRVS are keyed by sys_id instead of variable name.
   convertMrvsAjax: function () {
     var mrvs = JSON.parse(this.getParameter('sysparm_mrvs'));
 

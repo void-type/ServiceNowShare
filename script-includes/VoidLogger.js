@@ -1,6 +1,3 @@
-// A semi-structured logger.
-// You get a JSON object in the log that you can then copy/paste into VScode or see in Xplore.
-
 var VoidLogger = Class.create();
 VoidLogger.prototype = {
   initialize: function (contextName, minimumLevel) {

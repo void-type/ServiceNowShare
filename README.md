@@ -10,7 +10,7 @@ Update sets, scripts, and more for ServiceNow.
 
 ## Script Includes
 
-[VoidLogger](script-includes/VoidLogger.js) - A semi-structured logger.
+[VoidLogger](script-includes/VoidLogger.md) - A semi-structured logger.
 
 [VoidServiceCatalogAjax](script-includes/VoidServiceCatalogAjax.js) - Client-side catalog helpers.
 
