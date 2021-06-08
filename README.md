@@ -4,9 +4,9 @@ Update sets, scripts, and more for ServiceNow.
 
 ## On ServiceNow Share
 
-[Service Portal Widget - My Managed Groups](Share/BatchUpdateSets/README.md)
+[Service Portal Widget - My Managed Groups](Share/Sp_MyManagedGroups/README.md)
 
-[Batch Update Sets - Extension for Bulk Download and Rename of Update Sets](Share/Sp_MyManagedGroups/README.md)
+[Batch Update Sets - Extension for Bulk Download and Rename of Update Sets](Share/BatchUpdateSets/README.md)
 
 ## Script Includes
 
