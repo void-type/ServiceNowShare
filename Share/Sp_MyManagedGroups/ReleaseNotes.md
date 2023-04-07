@@ -1,3 +1,7 @@
+## v1.5
+
+* Fix UI issues in Tokyo/Utah.
+
 ## v1.4
 
 * Filter out inactive group members because they show (empty) name.
